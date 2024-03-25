@@ -40,6 +40,9 @@
 
                     document.body.appendChild(container);
                 }
+                var redValue = Math.floor((20 - i) * (255 / 20)); // Calculate red value based on countdown
+                document.body.style.backgroundColor = "rgb(" + redValue + ", 0, 0)";
+       
             }
         </script>
     </body>
