@@ -8,7 +8,7 @@
 <body style="font-family: Courior New, monospace; color: #3c4443">    
   
   <div align="center">
-  	<h1>welcome to my web page
+  	<h1>welcome to my web page</h1> <!-- Added missing closing tag -->
   </div>
   
  
@@ -33,6 +33,24 @@
   </center>
     </p>
 
+  <div align="center">
+    <button onclick="toggleMode()">Toggle Mode</button>
+  </div>
+
+  <script>
+    function toggleMode() {
+      var body = document.body;
+      body.classList.toggle('dark-mode');
+    }
+  </script>
+
+  <style>
+    .dark-mode {
+      background-color: #222;
+      color: #fff;
+    }
+  </style>
 
 </body>  
 </html>
+
