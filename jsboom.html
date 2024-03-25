@@ -33,7 +33,6 @@
                 countobj.innerHTML = "<b>" + i + "</b>";
     
                 if (i === 0) {
-                    // Display a big picture of Snoopy
                     var imageElement = document.createElement("img");
                     imageElement.src = "bigsnoopy.png";
                     imageElement.alt = "Snoopy";
@@ -62,11 +61,9 @@
                 var quoteContainer = document.getElementById("quoteContainer");
                 var quote = document.getElementById("quote");
 
-                // Randomly select a quote
                 var randomIndex = Math.floor(Math.random() * quotes.length);
                 var selectedQuote = quotes[randomIndex];
 
-                // Toggle visibility and update the quote
                 if (quoteContainer.style.display === "none") {
                     quoteContainer.style.display = "block";
                     quote.textContent = selectedQuote;

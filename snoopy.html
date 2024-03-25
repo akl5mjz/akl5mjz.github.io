@@ -1,29 +1,41 @@
 <html>
 <head>
-  <title>Snoopy</title>
+  <title>Snoopy Carousel</title>
   
   <link rel="stylesheet" href="/style.css" type="text/css">
   
 </head>
-<body style="font-family: Courior New, monospace; color: #3c4443">
+<body style="font-family: Courier New, monospace; color: #3c4443">
 
-  <h1>Snoopy</h1>
+  <h1>Snoopy Carousel</h1>
   <hr width="100%" size="1" color="#3c4443">
   <div align="right">
     <a href="index.html">Index</a>
     <hr width="100%" size="1" color="#3c4443">
   </div>
   
-  <p align="left">
-  Here are some pictures of Snoopy doing various activites!
-  
-  <center>
-  <a href="/snoopy_love_letters.jpeg"><img width="60%" src="/snoopy_love_letters.jpeg"></a>
-  <a href="/snoopy_driving.jpeg"><img width="60%" src="/snoopy_driving.jpeg"></a>
-  <a href="/snoopy_icecream.jpeg"><img width="60%" src="/snoopy_icecream.jpeg"></a>
-  <a href="/snoopy_camera.jpeg"><img width="60%" src="/snoopy_camera.jpeg"></a>
-</center>
+  <p align="center">
+    <img id="carouselImage" width="60%" src="/snoopy_love_letters.jpeg" alt="Snoopy Image">
   </p>
+
+  <button onclick="nextImage()">Next Image</button>
+
+  <script>
+    var images = [
+      "/snoopy_love_letters.jpeg",
+      "/snoopy_driving.jpeg",
+      "/snoopy_icecream.jpeg",
+      "/snoopy_camera.jpeg"
+    ];
+
+    var currentIndex = 0;
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      var carouselImage = document.getElementById("carouselImage");
+      carouselImage.src = images[currentIndex];
+    }
+  </script>
   
 </body>  
 </html>
