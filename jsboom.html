@@ -73,34 +73,40 @@
             }   
         </script>
 
-        <div align="center">
-            <button onclick="toggleMode()">Light/Dark Mode</button>
-          </div>
-        
-          <script>
-            function toggleMode() {
-              var body = document.body;
-              body.classList.toggle('dark-mode');
-            }
-          </script>
-        
-          <style>
-            .dark-mode {
-              background-color: #222;
-              border-color: #ffffff; 
-              border-style: solid; 
-              border-width: 1px; 
-            }
-            .dark-mode * {
-              color: #ffe3e3;
-            }
-            .dark-mode hr {
-          border-color: #ffffff;
-          }
-          .dark-mode button {
-          color: black;
-          }
-          </style>
-          
-    </body>
-    </html>
+<div class="dark-mode-button-container">
+    <button onclick="toggleMode()">Light/Dark Mode</button>
+  </div>
+
+  <script>
+    function toggleMode() {
+      var body = document.body;
+      body.classList.toggle('dark-mode');
+    }
+  </script>
+
+  <style>
+    .dark-mode {
+      background-color: #222;
+      border-color: #ffffff; 
+      border-style: solid; 
+      border-width: 1px; 
+    }
+    .dark-mode * {
+      color: #ffe3e3;
+    }
+    .dark-mode hr {
+      border-color: #ffffff;
+    }
+    .dark-mode button {
+      color: black;
+    }
+
+    .dark-mode-button-container {
+      position: fixed;
+      bottom: 35px;
+      right: 35px;
+    }
+  </style>
+
+</body>
+</html>

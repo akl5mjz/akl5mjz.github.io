@@ -13,12 +13,12 @@
     <a href="index.html">Index</a>
     <hr width="100%" size="1" color="#3c4443">
   </div>
-  
+
+  <button onclick="nextImage()">Next Image</button>
+
   <p align="center">
     <img id="carouselImage" width="60%" src="/snoopy_love_letters.jpeg" alt="Snoopy Image">
   </p>
-
-  <button onclick="nextImage()">Next Image</button>
 
   <script>
     var images = [
@@ -38,7 +38,7 @@
     }
   </script>
   
-  <div align="center">
+  <div class="dark-mode-button-container">
     <button onclick="toggleMode()">Light/Dark Mode</button>
   </div>
 
@@ -60,12 +60,18 @@
       color: #ffe3e3;
     }
     .dark-mode hr {
-  border-color: #ffffff;
-  }
-  .dark-mode button {
-  color: black;
-  }
+      border-color: #ffffff;
+    }
+    .dark-mode button {
+      color: black;
+    }
+
+    .dark-mode-button-container {
+      position: fixed;
+      bottom: 35px;
+      right: 35px;
+    }
   </style>
-  
+   
 </body>  
 </html>
