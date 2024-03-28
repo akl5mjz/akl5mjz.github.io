@@ -15,10 +15,10 @@
         </div>
 
         <h2>Count Down: <span id="count">20</span></h2>
-        <button onclick="updateCount()">Next</button>
+        <button style="margin-bottom: 10px;" onclick="updateCount()">Next</button>
 
     
-        <button onclick="toggleQuote()">Quotes by Charles Schulz</button>
+        <button style="margin-bottom: 10px;" onclick="toggleQuote()">Quotes by Charles Schulz</button>
         <div id="quoteContainer" style="display: none;">
             <p id="quote"></p>
         </div>
@@ -36,6 +36,8 @@
                     var imageElement = document.createElement("img");
                     imageElement.src = "bigsnoopy.png";
                     imageElement.alt = "Snoopy";
+                    imageElement.style.width = "75%"; 
+                    imageElement.style.height = "auto";
                     var container = document.createElement("div");
                     container.style.display = "flex";
                     container.style.justifyContent = "center";
@@ -45,7 +47,7 @@
 
                     document.body.appendChild(container);
                 }
-                var redValue = Math.floor((20 - i) * (255 / 20)); // Calculate red value based on countdown
+                var redValue = Math.floor((20 - i) * (255 / 20));
                 document.body.style.backgroundColor = "rgb(" + redValue + ", 0, 0)";
             }
 
